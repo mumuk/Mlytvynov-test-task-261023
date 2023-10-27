@@ -11,7 +11,7 @@ import { type ITab } from '../intetfaces/ITab'
 
 const createComponentsMap = (tabs: ITab[]): Record<string, React.LazyExoticComponent<any>> => {
   const componentsMap: Record<string, React.LazyExoticComponent<any>> = {}
-
+  console.log('tabs', tabs)
   tabs.forEach((tab) => {
     componentsMap[tab.id] = lazy(async () => await import(`../tabs/${tab.id}.tsx`))
   })
