@@ -1,0 +1,20 @@
+
+$primary: #6C757D;
+$secondary: #B4B9BE;
+$accent: #17A2B8;
+
+$primary-color: $primary;  // Темный цвет для основных элементов и фона.
+$secondary-color: $secondary;  // Середний тон для второстепенных элементов или фона.
+$accent-color: $accent;  // Яркий оранжевый акцентный цвет для выделения или активных элементов.
+
+// Переопределение цветов Bootstrap
+$theme-colors: (
+        "primary": $primary-color,
+        "secondary": $secondary-color,
+        "accent": $accent-color
+);
+
+
+
+// Импорт стилевых файлов Bootstrap
+@import 'bootstrap';
