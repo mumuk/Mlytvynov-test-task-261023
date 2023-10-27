@@ -20,7 +20,7 @@ const createComponentsMap = (tabs: ITab[]): Record<string, React.LazyExoticCompo
 }
 
 const AppRouter: React.FC<{ tabs: ITab[] }> = ({ tabs }) => {
-  const defaultTab = tabs[0]?.id
+  const defaultTab = tabs[2]?.id
   const dynamicComponentsMap = createComponentsMap(tabs)
 
   return (

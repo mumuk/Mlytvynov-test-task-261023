@@ -1,16 +1,17 @@
 {
   "tabs": [
-    {
-      "id": "dummyTable",
-      "title": "Dummy Table",
-      "order": 1,
-      "path": "tabs/dummyTable.js"
-    },
+
     {
       "id": "dummyChart",
       "title": "Dummy Chart",
       "order": 2,
       "path": "tabs/dummyChart.js"
+    },
+    {
+      "id": "dummyTable",
+      "title": "Dummy Table",
+      "order": 1,
+      "path": "tabs/dummyTable.js"
     },
     {
       "id": "dummyList",
