@@ -1,10 +1,11 @@
 import { NavLink } from 'react-router-dom'
-import { ITab } from '../intetfaces/ITab'
-import React from "react";
+import { type ITab } from '../intetfaces/ITab'
+import React from 'react'
 
 interface NavbarProps {
-  tabs: ITab[];
+  tabs: ITab[]
 }
+
 const Navbar: React.FC<NavbarProps> = ({ tabs }) => {
   return (
     <nav className="navbar navbar-expand-lg   navbar-dark bg-dark h-100 pb-0">
@@ -23,7 +24,7 @@ const Navbar: React.FC<NavbarProps> = ({ tabs }) => {
         <ul className="navbar-nav">
           {tabs
             .sort(
-              (a: { order: number }, b: { order: number }) => a.order - b.order,
+              (a: { order: number }, b: { order: number }) => a.order - b.order
             )
             .map((tab: ITab) => (
               <li

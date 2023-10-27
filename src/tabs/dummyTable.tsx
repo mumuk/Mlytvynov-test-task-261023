@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const DummyTable: React.FC = () => (
   <div className="container mt-5">
@@ -21,6 +21,6 @@ const DummyTable: React.FC = () => (
       </tbody>
     </table>
   </div>
-);
+)
 
-export default DummyTable;
+export default DummyTable

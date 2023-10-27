@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const DummyChart: React.FC = () => (
   <div className="p-4 bg-white border rounded">
@@ -7,7 +7,7 @@ const DummyChart: React.FC = () => (
       <div
         className="progress-bar"
         role="progressbar"
-        style={{width: '25%'}}
+        style={{ width: '25%' }}
         aria-valuenow={25}
         aria-valuemin={0}
         aria-valuemax={100}>25%
@@ -17,7 +17,7 @@ const DummyChart: React.FC = () => (
       <div
         className="progress-bar bg-success"
         role="progressbar"
-        style={{width: '50%'}}
+        style={{ width: '50%' }}
         aria-valuenow={50}
         aria-valuemin={0}
         aria-valuemax={100}
@@ -28,7 +28,7 @@ const DummyChart: React.FC = () => (
       <div
         className="progress-bar bg-info"
         role="progressbar"
-        style={{width: '75%'}}
+        style={{ width: '75%' }}
         aria-valuenow={75}
         aria-valuemin={0}
         aria-valuemax={100}

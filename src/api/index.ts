@@ -1,4 +1,4 @@
-import { ITab } from '../intetfaces/ITab'
+import { type ITab } from '../intetfaces/ITab'
 
 export const fetchTabs = async (): Promise<ITab[]> => {
   try {

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const DummyList: React.FC = () => (
   <div>
@@ -11,6 +11,5 @@ const DummyList: React.FC = () => (
       <a href="#" className="list-group-item list-group-item-action">Item 3</a>
     </div>
   </div>)
-
 
 export default DummyList
