@@ -1,4 +1,5 @@
-import { type ITab } from '../intetfaces/ITab'
+import { ITab } from '../intetfaces/ITab'
+import data from '../server/db.json'
 
 export const fetchTabs = async (): Promise<ITab[]> => {
   try {
@@ -8,4 +9,14 @@ export const fetchTabs = async (): Promise<ITab[]> => {
     console.error('Error fetching tabs:', error)
     throw error
   }
+}
+
+export const fakeFetchTabs = async (): Promise<ITab[]> => {
+  // @ts-expect-error type mismatch
+  const tabsData: ITab[] = data.tabs
+  return await new Promise<ITab[]>(resolve => {
+    setTimeout(() => {
+      resolve(tabsData)
+    }, 1000)
+  })
 }

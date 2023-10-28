@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import { type ITab } from '../intetfaces/ITab'
+import { ITab } from '../intetfaces/ITab'
 import React from 'react'
 
 interface NavbarProps {

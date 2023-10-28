@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react'
+import React, { Suspense } from 'react'
 import {
   Route,
   BrowserRouter as Router,
@@ -7,21 +7,17 @@ import {
 } from 'react-router-dom'
 import Header from '../layout/Header'
 import Footer from '../layout/Footer.tsx'
-import { type ITab } from '../intetfaces/ITab'
+import { ITab } from '../intetfaces/ITab'
+import { useDynamicComponentsMap } from '../hooks/useDynamicComponentsMap.ts'
 
-const createComponentsMap = (tabs: ITab[]): Record<string, React.LazyExoticComponent<any>> => {
-  const componentsMap: Record<string, React.LazyExoticComponent<any>> = {}
-  console.log('tabs', tabs)
-  tabs.forEach((tab) => {
-    componentsMap[tab.id] = lazy(async () => await import(`../tabs/${tab.id}.tsx`))
-  })
-
-  return componentsMap
+const getDefaultTab = (desiredId: string, tabs: ITab[]): string | undefined => {
+  const exists = tabs.some(tab => tab.id === desiredId)
+  return exists ? desiredId : tabs[0]?.id
 }
 
 const AppRouter: React.FC<{ tabs: ITab[] }> = ({ tabs }) => {
-  const defaultTab = tabs[2]?.id
-  const dynamicComponentsMap = createComponentsMap(tabs)
+  const defaultTab = getDefaultTab('dummyList', tabs)
+  const dynamicComponentsMap = useDynamicComponentsMap(tabs)
 
   return (
     <Router>

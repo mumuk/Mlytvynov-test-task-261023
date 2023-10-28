@@ -1,10 +1,11 @@
 import React from 'react'
 import Navbar from './Navbar'
-import { type ITab } from '../intetfaces/ITab'
+import { ITab } from '../intetfaces/ITab'
 
 interface HeaderProps {
   tabs: ITab[]
 }
+
 const Header: React.FC<HeaderProps> = ({ tabs }) => {
   return (
     <header className="bg-primary rounded-bottom-3 mb-5">

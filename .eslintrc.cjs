@@ -6,6 +6,12 @@ module.exports = {
     'plugin:react/recommended'
   ],
   rules: {
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      {
+        "prefer": "no-type-imports" // этот вариант предпочтительнее
+      }
+    ],
     'react/jsx-filename-extension': [1, { extensions: ['.tsx'] }],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn'
